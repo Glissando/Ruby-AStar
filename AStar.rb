@@ -1,4 +1,3 @@
-
 #WIP
 class  Map{
 	
@@ -35,11 +34,11 @@ class PathNode
     return @x != node.x || @y != node.y
   end
   
-  def euclidean_distance(node)#distance_from
+  def euclidean_distance(node)#Euclidean distance
     return Math.sqrt(((@x - node.x) ** 2) + ((@y - node.y) ** 2))
   end
   
-  def Manhatton_distance(node)
+  def Manhatton_distance(node)#Manhattan distance, default heuristic calculation
 	return ((@x-node.x)+(@y-node.y))
 	
   def cost
