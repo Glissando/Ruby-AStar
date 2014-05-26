@@ -6,7 +6,7 @@ class Direction
   RIGHT = 6
   UP = 8
 end
- 
+
 class PathNode
   attr_reader   :x
   attr_reader   :y
@@ -35,7 +35,7 @@ class PathNode
     return Math.sqrt(((@x - node.x) ** 2) + ((@y - node.y) ** 2))
   end
   
-  def Manhatton_distance(node)#Manhattan distance, default heuristic calculation
+  def manhattan_distance(node)#Manhattan distance, default heuristic calculation
 	return ((@x-node.x)+(@y-node.y))
   end
   def cost
@@ -156,7 +156,7 @@ class Game_Character < Game_CharacterBase
   end
   
   def calc_travel_cost(n1, n2)
-    n1.euclidean_distance(n2)
+    n1.manhattan_distance(n2)
   end
   
   def get_connected_nodes(x, y)
