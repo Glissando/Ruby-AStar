@@ -1,8 +1,3 @@
-#WIP
-class  Map{
-	
-}
-
 #break
 
 class Direction
@@ -26,6 +21,7 @@ class PathNode
     @parent = parent
   end
   
+  #operator overloads
   def ==(node)
     return @x == node.x && @y == node.y
   end
@@ -34,13 +30,14 @@ class PathNode
     return @x != node.x || @y != node.y
   end
   
+  #Heuristics
   def euclidean_distance(node)#Euclidean distance
     return Math.sqrt(((@x - node.x) ** 2) + ((@y - node.y) ** 2))
   end
   
   def Manhatton_distance(node)#Manhattan distance, default heuristic calculation
 	return ((@x-node.x)+(@y-node.y))
-	
+  end
   def cost
     raise 'not implemented'
   end
