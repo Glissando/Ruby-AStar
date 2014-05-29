@@ -38,7 +38,7 @@ class PathNode
   end
   
   def manhattan_distance(node)#Manhattan distance, default heuristic calculation
-	return (((@x-node.x)).abs+((@y-node.y)).abs)
+    return (((@x-node.x)).abs+((@y-node.y)).abs)
   end
   def cost
     raise 'not implemented'
