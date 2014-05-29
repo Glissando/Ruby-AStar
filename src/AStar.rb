@@ -32,7 +32,9 @@ class PathNode
   
   #Heuristics
   def euclidean_distance(node)#Euclidean distance
-    return Math.sqrt(((@x - node.x) ** 2) + ((@y - node.y) ** 2))
+	x = (@x - node.x).abs
+	y = (@y - node.y).abs
+    return (x * Math.sqrt(1+((y/x) ** 2))
   end
   
   def manhattan_distance(node)#Manhattan distance, default heuristic calculation
