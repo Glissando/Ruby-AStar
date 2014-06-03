@@ -1,5 +1,3 @@
-#break
-
 class Direction
   DOWN = 2
   LEFT = 4
