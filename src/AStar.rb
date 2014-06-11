@@ -32,11 +32,11 @@ class PathNode
   def euclidean_distance(node)#Euclidean distance
     x = (@x - node.x).abs
     y = (@y - node.y).abs
-    return (x * Math.sqrt(1+((y/x) ** 2)))
+    return x * Math.sqrt(1+((y/x) ** 2))
   end
   
   def manhattan_distance(node)#Manhattan distance, default heuristic calculation
-    return (((@x-node.x)).abs+((@y-node.y)).abs)
+    return ((@x-node.x)).abs+((@y-node.y)).abs
   end
   def cost
     raise 'not implemented'
